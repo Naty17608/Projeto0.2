@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de alunos interessados em cursos de uma escola</title>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script type="text/javascript"  src="env.js"></script>
+    <script type="text/javascript"  src="javaScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSSLogin.css"> 
+    <link rel="stylesheet" type="text/css" href="CSS.css"> 
+  
+</head>
+<body>
+
+    <div class="authentication">
+    <p id="errorMessage"></p>
+    <p id ="message"></p>
+    </div>
+    
+
+    <div class="formulario">
+
+        <div class="authentication">
+            <p id="errorMessage"></p>
+            <p id ="message"></p>
+            </div>
+        
+        <form>
+            <h2>Crie um conta</h2>
+
+            <div class="campo">
+                <label for="email"><strong>Digite seu Email</strong></label>
+                <input type="email"  id="email" required>
+            </div>
+    
+            <div class="campo">
+                <label for="senha"><strong>Crie uma Senha</strong></label>
+                <input type="password" id="senha"required >
+    
+            </div>
+
+            <!-- <div class="campo">
+                <label for="ConfSenha"><strong> Confimar senha</strong></label>
+                <input type="password" id="ConfSenha" required>
+    
+            </div> -->
+            
+            <button class="botao" onclick="creatUser(event);" >Criar</button><br><br>
+
+            <a  href="login.html">voltar </a>
+
+
+        </form>
+    
+    </div>
+     
+   
+    
+</body>
+</html>

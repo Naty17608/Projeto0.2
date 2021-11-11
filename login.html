@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de alunos interessados em cursos de uma escola</title>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script type="text/javascript"  src="env.js"></script>
+    <script type="text/javascript"  src="javaScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSSLogin.css"> 
+    <link rel="stylesheet" type="text/css" href="CSS.css"> 
+
+    <style>
+        .formulario{
+    width: 40%;
+    height: 400px;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: #dbdce2; 
+    box-shadow: 10px 8px 13px 10px rgba(54, 53, 53, 0.342);
+    
+}
+
+form{
+    margin-top: 20px;
+}
+
+.campo,.botao,textarea {
+    margin-bottom: 20px;
+
+              
+}
+
+.box{
+
+    width: 500px;
+    border-radius:10px;
+    
+}
+
+input, label {
+    display: inline;
+    outline: none;
+    font-size: 12pt;
+}
+
+
+textarea{
+   
+    border-radius:10px;
+    align-items: center;
+    border-radius: 20px;
+    border-width: 1px;
+    color:gainsboro;
+}
+
+.botao{
+    margin: 20px;
+
+}
+
+
+#aparece{
+    display: none;
+}
+
+a .button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+</style>
+</head>
+<body>
+
+   
+
+    <div class="formulario">
+        
+        <form>
+            <h2>login</h2>
+
+            <div class="campo">
+                <label for="email"><strong>Email</strong></label>
+                <input type="email"  id="email2" >
+                <!-- required -->
+            </div>
+    
+            <div class="campo">
+                <label for="senha"><strong>Senha</strong></label>
+                <input type="password" id="senha2" >
+    
+            </div>
+            
+            <button class="botao" onclick="authenticateUser(event)" >Login </button><br><br>
+
+            <a  class="link-a" href="conta.html">Cria Conta </a><br><br>
+
+            
+            <span id=aparece>
+                <button class="botao" onclick="userdeleted(event)" >Deletar conta </button>
+
+                <button class="botao" onclick="passwordReset(event)" >Mudar a senha</button>
+
+               <a href="gerecimentoUser.html">Gerenciar Usuarios</a>
+                
+            </span>
+            
+
+            <div class="authentication">
+                <p id="errorMessage"></p>
+                <p id ="message"></p>
+            </div>
+
+          
+        </form>
+    
+    </div>
+    <div>
+
+    </div>
+     
+   
+    
+</body>
+</html>

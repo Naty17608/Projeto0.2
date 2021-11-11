@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS.css"> 
+    <title>Fale Conosco</title>
+    <style>
+
+        form{
+            width: 80%;
+            text-align: center;
+            border-radius: 5px;
+            border-width: 1px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            background-color: #dbdce2; 
+            box-shadow: 10px 8px 13px 10px rgba(54, 53, 53, 0.342);
+            
+            
+        }
+
+        .campo,.botao,textarea {
+            margin-bottom: 20px;
+            
+        }
+
+        .box{
+
+            width: 500px;
+            border-radius:10px;
+            
+        }
+       
+        input, label {
+            display: inline;
+            outline: none;
+            font-size: 12pt;
+        }
+
+        
+        textarea{
+           
+            border-radius:10px;
+            align-items: center;
+            border-radius: 20px;
+            border-width: 1px;
+            color:gainsboro;
+            
+        }
+   
+    </style>
+</head>
+<body>
+    
+    <div>
+        <nav id="menu">
+            
+            <ul>
+              <div id="logo">
+                <a href="#">
+                    <img src="imagens/news-2.png" alt="" />
+                </a>
+              </div>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="Politica.html">Politica</a></li>
+              <li><a href="Educacao.html">Educação</a></li>
+              <li><a href="Saude.html">Saúde</a></li>
+              <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+          </nav>
+      </div>>
+        
+    
+    <form>
+           <h1>Fale Conosco</h1>
+
+            <div class="campo">
+                <label for="nome"><strong>Nome:</strong></label>
+                <input class="box" type="text" id="nome" required>
+            </div>
+
+            
+            <div class="campo">
+                <label for="fone"><strong>Fone:</strong></label>
+                <input class="box" type="text" " id="fone">
+            </div>
+        
+            <!-- Campo de email com-->
+            <div class="campo">
+                <label for="email"><strong>Email:</strong></label>
+                <input class="box" type="email"  id="email" required>
+            </div>
+        
+            <label for="comentario"><strong>Comentário</strong></label>
+            <br>
+
+            <textarea  id="comentario" name="comentario" rows="7" cols="80"></textarea>
+
+            <br>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Eviar</button>  
+            
+
+
+    </form>
+</body>
+</html>

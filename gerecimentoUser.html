@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de alunos interessados em cursos de uma escola</title>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script type="text/javascript"  src="env.js"></script>
+    <script type="text/javascript"  src="javaScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS.css"> 
+    <link rel="stylesheet" type="text/css" href="CSSLogin.css"> 
+    
+    
+  <style>
+    .formulario{
+    width: 50%;
+    height: 500px;
+    text-align:left;
+    }
+
+    .botao{
+    margin: 1px;
+    width: 90px;
+    }
+      
+    input{
+        width: 400px;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+   
+
+    <div class="">
+        <div class="formulario">
+        
+            <form>
+                <h2> Gerenciar Usuarios</h2>
+    
+                <div class="row">
+                    <h4> adicionar usuarios </h4>
+                    <p id =errorMessage></p>
+                    <div class="campo">
+                        <label for="email"><strong>Email</strong></label>
+                        <input type="email"  id="email" >
+                    </div>
+            
+                    <div class="campo">
+                        <label for="senha"><strong>Senha</strong></label>
+                        <input type="password" id="senha" >
+            
+                    </div>
+                        <button class="botao" onclick="addUser(event)" >Adicionar</button>
+                   
+                   
+                </div>
+    
+               
+                
+                <div class="row">
+                    <h4>remover usuario </h4>
+                    <p id =errorMessage></p>
+                    <label for="id"><strong>id do usuario</strong></label>
+                    <input type="text"  id="id" ><br>
+                    <button class="botao" onclick="removeUser(event)" >remover</button>
+                    <!-- duvida pq input? -->
+                </div>
+
+    
+                <div class="row">
+                  <div class="col-12 border border- primary mt-3 p-2">
+                    <h4>listar usuarios </h4>
+                    <p id =errorMessage></p>
+                    <button class="botao" onclick="listUser(event)" >Listar</button>
+                    <table class="table"></table>
+                  </div>
+                    
+                </div>
+                
+    
+       
+            </form>
+        
+        </div>
+    </div>
+  
+</body>
+</html>
